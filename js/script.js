@@ -22,15 +22,15 @@ function myButtonClicked() {
   // input
   const numberOfLoops = parseFloat(document.getElementById("numberOfLoops").value)
   let counter = 0
-  let denomonaitor = -1
+  let denominaitor = -1
   let pi = 0
 
   // process
   while (counter < numberOfLoops) {
     let numerator = 4
-    denomonaitor = denomonaitor + 2
+    denominaitor = denominaitor + 2
     let multiply = (-1) ** counter
-    let aLittleBit = (numerator / denomonaitor) * multiply
+    let aLittleBit = (numerator / denominaitor) * multiply
     pi = pi + aLittleBit
     counter = counter + 1
   }
