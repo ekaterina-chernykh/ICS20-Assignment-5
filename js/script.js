@@ -20,10 +20,21 @@ if (navigator.serviceWorker) {
  */
 function myButtonClicked() {
   // input
-  const height = parseFloat(document.getElementById("height").value)
+  const numberOfLoops = parseFloat(document.getElementById("numberOfLoops").value)
+  let counter = 0
+  let denomonaitor = -1
+  let pi = 0
 
   // process
-  const volume = 2
+  while (counter < numberOfLoops) {
+    let numerator = 4
+    denomonaitor = denomonaitor + 2
+    let multiply = (-1) ** counter
+    let aLittleBit = (numerator / denomonaitor) * multiply
+    pi = pi + aLittleBit
+    counter = counter + 1
+  }
+
   // output
-  document.getElementById("volume").innerHTML = "Volume is: " + volume + "mm³"
+  document.getElementById("answer").innerHTML = "Your PI is: " + pi
 }
